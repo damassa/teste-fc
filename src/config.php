@@ -1,3 +1,3 @@
-<?
-    define("baseURL", "http://localhost/teste-fc/src/");
+<?php
+    define("BASE_URL", "http://localhost/teste-fc/src/");
 ?>
