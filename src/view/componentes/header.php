@@ -1,5 +1,6 @@
 <?php 
     include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/config.php";
+    include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/controller/MedicoController.php";
 ?>
 
 <!DOCTYPE html>

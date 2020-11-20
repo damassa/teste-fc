@@ -20,9 +20,6 @@ header {
 
     border: none;
     border-radius: 6px;
-    
-    padding: 15px 32px;
-    margin: 4px 2px;
 
     text-align: center;
     text-decoration: none;
@@ -33,4 +30,5 @@ header {
 
 .listCard {
     background-color: #ffffff;
+    display: flex;
 }
