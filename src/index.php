@@ -1,4 +1,5 @@
 <?php 
+
 require "view/componentes/header.php"; 
 $medicos = MedicoController::Listagem();
 ?>

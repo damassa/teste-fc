@@ -19,6 +19,6 @@
 <body>
     <header>
         <div>
-            <a class="botaoCadastro" href="<?=BASE_URL?>/view/medico/cadastro_medico.php">Cadastro de médico</a>
+            <a class="botaoCadastro" href="<?=BASE_URL?>view/medico/cadastro_medico.php">Cadastro de médico</a>
         </div>
     </header>

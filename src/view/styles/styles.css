@@ -32,3 +32,15 @@ header {
     background-color: #ffffff;
     display: flex;
 }
+
+.cadastroCard {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastroCard h1 {
+    color: #0094CF;
+    text-align: center;
+}
