@@ -28,7 +28,7 @@ if($_GET["erro"]) {
         </div>
         <div class="buttonsForm">
             <div class="botaoContainer">
-                <button type="submit">Realizar cadastro</button>
+                <button type="submit">Atualizar cadastro</button>
             </div>
             <div class="voltarContainer">
                 <a href="<?=BASE_URL?>index.php">Voltar para a página inicial</a>
