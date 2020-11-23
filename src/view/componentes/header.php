@@ -18,7 +18,7 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="headerContainer">
             <a class="botaoCadastro" href="<?=BASE_URL?>view/medico/cadastro_medico.php">Cadastro de médico</a>
         </div>
     </header>
