@@ -2,6 +2,11 @@
 
 require "view/componentes/header.php"; 
 $medicos = MedicoController::Listagem();
+
+if($_GET["cadastrado"]) {
+    echo "Cadastrado com sucesso!";
+}
+
 ?>
 
 <div class="listCard">
