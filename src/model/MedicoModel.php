@@ -34,6 +34,21 @@ class MedicoModel {
         return $insert->execute();
     }
 
+    public static function AtualizarMedico($id, $email, $nome, $senha) {
+        global $conn;
+
+        $sql = "UPDATE `medicos` SET  
+        `email` = :EMAIL, `nome` = :NOME, `senha` = :SENHA 
+        WHERE `id` = $id";
+
+        $update = $conn->prepare($sql);
+        $update->bindParam(":EMAIL", $email);
+        $update->bindParam(":NOME", $nome);
+        $update->bindParam(":SENHA", $senha);
+
+        return $insert->execute();
+    }
+
     public static function DeletarUmMedico($id) {
         $sql = "DELETE FROM `medicos` WHERE `id` = :ID";
     

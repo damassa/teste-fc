@@ -22,11 +22,23 @@ class MedicoController {
             return false;
         }
 
-        if(strlen($senha) < 6) {
-            echo"Senha com poucos caracteres!";
+        if(strlen($nome) && strlen($senha) < 6) {
+            echo"Nome ou senha com poucos caracteres!";
             return false;
         }
 
         $medico->CadastrarMedico($email, $nome, $senha_encript);
+    }
+
+    public function Atualizar($email, $nome, $senha) {
+        $medico = new MedicoModel();
+        $senha_encript = password_hash($senha, PASSWORD_DEFAULT);
+
+        if(strlen($nome) && strlen($senha) < 6) {
+            echo"Nome ou senha com poucos caracteres!";
+            return false;
+        }
+
+        $medico->AtualizarMedico($email, $nome, $senha_encript);
     }
 }

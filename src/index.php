@@ -15,7 +15,7 @@ if($_GET["cadastrado"]) {
             <div class="opcoesCard">
                 <h1><?=$medico["nome"]?></h1>
                 <div class="controleCard">
-                    <a href="<?=BASE_URL?>view/medico/edicao_medico.php?id=<?=$medico["id"]?>">
+                    <a href="<?=BASE_URL?>view/medico/altera_medico.php?id=<?=$medico["id"]?>">
                         Editar cadastro
                     </a>
                     <a href="<?=BASE_URL?>view/horario/configurar_horario.php?medico=<?=$medico["id"]?>">

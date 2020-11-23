@@ -6,7 +6,7 @@ if($_GET["erro"]) {
 ?>
 
 <div class="cadastroCard">
-    <h1>Cadastro de médico</h1>
+<h1>Editar médico</h1>
     <form method="post" action="salva_medico.php">
         <div class="labelForm">
             <label class="formLabel" for="name">Nome:</label>
@@ -35,6 +35,5 @@ if($_GET["erro"]) {
             </div>
         </div>
     </form>
+    </div>
 </div>
-
-<?php require "../componentes/rodape.php" ?>
