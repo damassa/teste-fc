@@ -66,7 +66,7 @@ class MedicoModel {
         $update->bindParam(":NOME", $nome);
         $update->bindParam(":SENHA", $senha);
 
-        return $insert->execute();
+        return $update->execute();
     }
 
     public static function DeletarUmMedico($id) {

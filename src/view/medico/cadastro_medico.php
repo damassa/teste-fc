@@ -1,8 +1,5 @@
 <?php 
 require "../componentes/header.php";
-if($_GET["erro"]) {
-    echo "Erro! E-mail ou senha inválidos!";
-}
 ?>
 
 <div class="cadastroCard">

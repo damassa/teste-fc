@@ -19,15 +19,16 @@ class MedicoController {
         $senha_encript = password_hash($senha, PASSWORD_DEFAULT);
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["erro"] = "E-mail inválido!";
             return false;
         }
 
-        if(strlen($nome) && strlen($senha) < 6) {
-            echo"Nome ou senha com poucos caracteres!";
+        if(strlen($nome) < 6 || strlen($senha) < 6) {
+            $_SESSION["erro"] = "Nome ou senha com poucos caracteres!";
             return false;
         }
 
-        $medico->CadastrarMedico($email, $nome, $senha_encript);
+        return $medico->CadastrarMedico($email, $nome, $senha_encript);
     }
 
     public function Atualizar($id, $nome, $senha, $senha_nova) {
@@ -35,14 +36,13 @@ class MedicoController {
         
         $senha_antiga = $medico->PegarSenha($id);
 
-        if(!password_verify($senha_antiga, $senha_nova)) {
+        if(!password_verify($senha, $senha_antiga)) {
             return false;
         }
 
         $senha_encript = password_hash($senha_nova, PASSWORD_DEFAULT);
 
-        if(strlen($nome) && strlen($senha_nova) < 6) {
-            echo"Nome ou senha com poucos caracteres!";
+        if(strlen($nome) < 6 || strlen($senha_nova) < 6) {
             return false;
         }
 

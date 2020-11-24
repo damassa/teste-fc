@@ -1,10 +1,6 @@
 <?php 
 require "../componentes/header.php";
 $medico = MedicoController::BuscarUmMedico($_GET["id"]);
-
-if($_GET["erro"]) {
-    echo "Erro!";
-}
 ?>
 
 <div class="cadastroCard">

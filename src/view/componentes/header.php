@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/config.php";
     include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/controller/MedicoController.php";
 ?>
@@ -22,3 +23,6 @@
             <a class="botaoCadastro" href="<?=BASE_URL?>view/medico/cadastro_medico.php">Cadastro de médico</a>
         </div>
     </header>
+<?php
+    include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/view/componentes/erro.php";
+?>
