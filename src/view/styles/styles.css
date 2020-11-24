@@ -1,3 +1,4 @@
+/* Estilo geral */
 body {
     margin: 0;
     padding: 0;
@@ -45,6 +46,10 @@ header {
 
     padding: 12px;
 }
+
+/* ----------------------------------------------- */
+
+/* Index/Listagem */
 
 .listCard {
     display: flex;
@@ -125,6 +130,10 @@ header {
     color: #0094CF;
 }
 
+/* ---------------------------------------- */
+
+/* Cadastro/Alteração de Médico */
+
 .cadastroCard {
     width: 45%;
 
@@ -194,9 +203,12 @@ header {
     color: #ffffff;
     font-family: 'Signika', sans-serif;
     border: none;
-    padding: 10px 18px;
     border-radius: 3px;
     cursor: pointer;
+
+    padding: 10px 18px;
+
+    
 }
 
 .voltarContainer {
@@ -210,6 +222,61 @@ header {
 .voltarContainer a {
     color: #0094CF;
     text-align: center;
+}
+
+/* ------------------------------------------ */
+
+/* Configurar horário */
+
+.configContainer {
+    width: 80%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.addHorarioCard {
+    width: 40%;
+    background-color: #ffffff;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.addHorarioCard h1 {
+    color: #004768;
+}
+
+.addHorarioDados {
+    width: 95%;
+}
+
+.addHorarioDados strong {
+    color: #004768;
+}
+
+.addHorarioDados h2 {
+    color: #004768;
+}
+
+.configHorarioCard {
+    width: 40%;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.configHorarioCard h1 {
+    color: #004768;
+}
+
+.listaHorariosCard {
+    width: 95%;
 }
 
 @media only screen and (max-width: 600px) {

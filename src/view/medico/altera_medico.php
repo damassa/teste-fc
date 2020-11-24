@@ -37,3 +37,5 @@ if($_GET["erro"]) {
     </form>
     </div>
 </div>
+
+<?php require "../componentes/rodape.php" ?>
