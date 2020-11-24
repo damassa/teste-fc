@@ -7,6 +7,10 @@ if($_GET["cadastrado"]) {
     echo "Cadastrado com sucesso!";
 }
 
+if($_GET["alterado"]) {
+    echo "Alterado com sucesso!";
+}
+
 ?>
 
 <div class="listCard">

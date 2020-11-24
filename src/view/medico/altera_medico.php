@@ -1,30 +1,34 @@
 <?php 
 require "../componentes/header.php";
+$medico = MedicoController::BuscarUmMedico($_GET["id"]);
+
 if($_GET["erro"]) {
-    echo "Erro! E-mail ou senha inválidos!";
+    echo "Erro!";
 }
 ?>
 
 <div class="cadastroCard">
 <h1>Editar médico</h1>
-    <form method="post" action="salva_medico.php">
+    <form method="post" action="edita_medico.php">
+        <input type="hidden" name="id" value="<?=$medico["id"]?>" />
+        
         <div class="labelForm">
             <label class="formLabel" for="name">Nome:</label>
         </div>
         <div class="inputForm"> 
-            <input type="text" name="nome" placeholder="Insira o nome do profissional" required />
+            <input type="text" name="nome" placeholder="Insira o nome do profissional" value="<?=$medico["nome"]?>" required />
         </div>
         <div class="labelForm">
-            <label class="formLabel" for="name">E-mail:</label>
+            <label class="formLabel" for="senha">Senha antiga:</label>
         </div>
         <div class="inputForm">
-            <input type="email" name="email" placeholder="exemplo@dominio.com.br" required />
+            <input type="password" name="senha" placeholder="Insira a senha antiga" required />
         </div>
         <div class="labelForm">
-            <label class="formLabel" for="name">Senha:</label>
+            <label class="formLabel" for="senha_nova">Senha nova:</label>
         </div>
         <div class="inputForm">
-            <input type="password" name="senha" placeholder="Escolha uma senha forte e segura" required />
+            <input type="password" name="senha_nova" placeholder="Insira a nova senha" required />
         </div>
         <div class="buttonsForm">
             <div class="botaoContainer">

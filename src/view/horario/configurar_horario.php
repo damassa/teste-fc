@@ -17,7 +17,7 @@ require "../componentes/header.php";
                         <button type="submit">Adicionar horário</button>
                     </div>
                     <div class="voltarContainer">
-                        <a href="">Voltar para a página inicial</a>
+                        <a href="<?=BASE_URL?>">Voltar para a página inicial</a>
                     </div>
                 </div>
             </form>

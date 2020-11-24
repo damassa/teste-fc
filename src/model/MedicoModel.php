@@ -10,6 +10,26 @@ class MedicoModel {
         return $result;
     }
 
+    public function PegarUm($id) {
+        global $conn;
+        $sql = "SELECT * FROM medicos WHERE `id` = :id";
+        $select = $conn-> prepare($sql);
+        $select->bindParam(":id", $id, PDO::PARAM_INT);
+        $select-> execute();
+        $result = $select->fetch();
+        return $result;
+    }
+
+    public function PegarSenha($id) {
+        global $conn;
+        $sql = "SELECT `senha` FROM medicos WHERE `id` = :id";
+        $select = $conn-> prepare($sql);
+        $select->bindParam(":id", $id, PDO::PARAM_INT);
+        $select-> execute();
+        $result = $select->fetch();
+        return $result["senha"];
+    }
+
     public function PegarHorariosMedico($id_medico) {
         global $conn;
         $sql = "SELECT * FROM horarios WHERE id_medico = :id_medico";
@@ -34,15 +54,15 @@ class MedicoModel {
         return $insert->execute();
     }
 
-    public static function AtualizarMedico($id, $email, $nome, $senha) {
+    public static function AtualizarMedico($id, $nome, $senha) {
         global $conn;
 
         $sql = "UPDATE `medicos` SET  
-        `email` = :EMAIL, `nome` = :NOME, `senha` = :SENHA 
-        WHERE `id` = $id";
+        `nome` = :NOME, `senha` = :SENHA 
+        WHERE `id` = :ID";
 
         $update = $conn->prepare($sql);
-        $update->bindParam(":EMAIL", $email);
+        $update->bindParam(":ID", $id);
         $update->bindParam(":NOME", $nome);
         $update->bindParam(":SENHA", $senha);
 

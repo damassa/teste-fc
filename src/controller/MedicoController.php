@@ -30,15 +30,27 @@ class MedicoController {
         $medico->CadastrarMedico($email, $nome, $senha_encript);
     }
 
-    public function Atualizar($email, $nome, $senha) {
+    public function Atualizar($id, $nome, $senha, $senha_nova) {
         $medico = new MedicoModel();
-        $senha_encript = password_hash($senha, PASSWORD_DEFAULT);
+        
+        $senha_antiga = $medico->PegarSenha($id);
 
-        if(strlen($nome) && strlen($senha) < 6) {
+        if(!password_verify($senha_antiga, $senha_nova)) {
+            return false;
+        }
+
+        $senha_encript = password_hash($senha_nova, PASSWORD_DEFAULT);
+
+        if(strlen($nome) && strlen($senha_nova) < 6) {
             echo"Nome ou senha com poucos caracteres!";
             return false;
         }
 
-        $medico->AtualizarMedico($email, $nome, $senha_encript);
+        return $medico->AtualizarMedico($id, $nome, $senha_encript);
+    }
+
+    public function BuscarUmMedico($id) {
+        $medico = new MedicoModel();
+        return $medico->PegarUm($id);
     }
 }
