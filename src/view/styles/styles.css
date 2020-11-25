@@ -325,9 +325,20 @@ header {
     .opcoesCard h1 {
         width: 100%;
         justify-content:  center;
+        text-align: center;
     }
 
     .controleCard {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .controleCard {
+        flex-wrap: nowrap;
+    }
+    
+    .controleCard a {
+        margin-left: 5px;
     }
 }
