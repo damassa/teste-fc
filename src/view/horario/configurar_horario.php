@@ -1,5 +1,7 @@
 <?php 
 require "../componentes/header.php";
+$medico = MedicoController::BuscarUmMedico($_GET["id"]);
+
 ?>
 
 <div class="configContainer"> 
@@ -7,9 +9,9 @@ require "../componentes/header.php";
         <h1>Adicionar horários</h1>
         <div class="addHorarioDados">
             <strong>Nome: </strong>
-            <h2>Dr. Fulano de Tal</h2>
+            <h2><?=$medico["nome"]?></h2>
             <strong>Data e hora</strong>
-            <form action="add_horario.php" method="post">
+            <form action="add_horario.php" method="post" id="form-horario">
                 <input type="date" />
                 <input type="time" />
                 <div class="buttonsForm">
@@ -37,5 +39,10 @@ require "../componentes/header.php";
         </div>
     </div>
 </div>
-
+<script>
+    $("#form-horario").submit(function(event){
+        event.preventDefault();
+        console.log("Foi");
+    })
+</script>
 <?php require "../componentes/rodape.php" ?>

@@ -1,6 +1,5 @@
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/model/MedicoModel.php";
-include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/conexao.php";
 
 class MedicoController {
     public function Listagem() {
@@ -19,16 +18,22 @@ class MedicoController {
         $senha_encript = password_hash($senha, PASSWORD_DEFAULT);
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            setcookie("erro","E-mail inválido!");
+            CriaAlerta("erro","E-mail inválido!");
             return false;
         }
 
         if(strlen($nome) < 6 || strlen($senha) < 6) {
-            setcookie("erro","Nome ou senha com poucos caracteres!");
+            CriaAlerta("erro","Nome ou senha com poucos caracteres!");
             return false;
         }
 
-        return $medico->CadastrarMedico($email, $nome, $senha_encript);
+        if($medico->CadastrarMedico($email, $nome, $senha_encript)) {
+            CriaAlerta("sucesso", "Médico cadastrado com sucesso!");
+            return true;
+        } else {
+            CriaAlerta("erro", "Erro inesperado!");
+            return false;
+        }
     }
 
     public function Atualizar($id, $nome, $senha, $senha_nova) {
@@ -37,18 +42,24 @@ class MedicoController {
         $senha_antiga = $medico->PegarSenha($id);
 
         if(!password_verify($senha, $senha_antiga)) {
-            setcookie("erro","Senha inválida");
+            CriaAlerta("erro","Senha inválida");
             return false;
         }
 
         $senha_encript = password_hash($senha_nova, PASSWORD_DEFAULT);
 
         if(strlen($nome) < 6 || strlen($senha_nova) < 6) {
-            setcookie("erro","Nome ou senha com poucos caracteres!");
+            CriaAlerta("erro","Nome ou senha com poucos caracteres!");
             return false;
         }
 
-        return $medico->AtualizarMedico($id, $nome, $senha_encript);
+        if($medico->AtualizarMedico($id, $nome, $senha_encript)) {
+            CriaAlerta("sucesso", "Médico alterado com sucesso!");
+            return true;
+        } else {
+            CriaAlerta("erro", "Erro inesperado!");
+            return false;
+        }
     }
 
     public function BuscarUmMedico($id) {

@@ -1,8 +1,8 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/controller/MedicoController.php";
+include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/utils/header-imports.php";
 
 if(MedicoController::Cadastro($_POST["email"], $_POST["nome"], $_POST["senha"])) {
-    header("Location: ../../index.php?cadastrado=true");
+    header("Location: ../../index.php");
 } else {
-    header("Location: cadastro_medico.php?erro=true");
+    header("Location: cadastro_medico.php");
 }

@@ -232,6 +232,7 @@ header {
     width: 80%;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 
 }
@@ -279,6 +280,40 @@ header {
     width: 95%;
 }
 
+/* Snackbar (aviso de erro) */
+
+.snackbar {
+    position: absolute;
+    top: 90px;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    border: 1px solid;
+
+    min-width: 250px;
+    width: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snackbar.erro {
+    border-color: #f79fa8;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.snackbar.sucesso {
+    border-color: #a4faa7;
+    background-color: #E1F8D7;
+    color: #33721C;
+}
+
+/* ------------------------------------- */
+
+/* Breakpoints */
+
 @media only screen and (max-width: 600px) {
     .headerContainer {
         width: 90%;
@@ -314,6 +349,15 @@ header {
 
     .cadastroCard {
         width: 90%;
+    }
+
+    .addHorarioCard {
+        width: 100%;
+    }
+
+    .configHorarioCard {
+        width: 100%;
+        margin-top: 20px;
     }
 }
 
