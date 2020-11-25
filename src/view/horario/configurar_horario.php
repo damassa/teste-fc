@@ -12,8 +12,7 @@ $medico = MedicoController::BuscarUmMedico($_GET["id"]);
             <h2><?=$medico["nome"]?></h2>
             <strong>Data e hora</strong>
             <form action="add_horario.php" method="post" id="form-horario">
-                <input type="date" />
-                <input type="time" />
+                <input type="datetime-local" />
                 <div class="buttonsForm">
                     <div class="botaoContainer">
                         <button type="submit">Adicionar horário</button>
@@ -28,12 +27,113 @@ $medico = MedicoController::BuscarUmMedico($_GET["id"]);
     <div class="configHorarioCard">
         <h1>Horários configurados</h1>
         <div class="listaHorariosCard">
-            <div class="listHorarioContainer">
-                <div class="horario">
-                    <span>26/11/2020 07:00</span>
+            <div class="listaHorarioContainer">
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
                 </div>
-                <div class="removerHorario">
-                    <a href="">Remover</a>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
+                </div>
+
+                <div class="listaHorarioContainerInfo">
+                    <div class="horario">
+                        <span>26/11/2020 07:00</span>
+                    </div>
+                    <div class="removerHorario">
+                        <a href="">Remover</a>
+                    </div>
                 </div>
             </div>
         </div>

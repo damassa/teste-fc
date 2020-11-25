@@ -239,8 +239,20 @@ header {
 
 .addHorarioCard {
     width: 40%;
+    height: max-content; 
+
     background-color: #ffffff;
     
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#form-horario {
+    width: 100%;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -248,10 +260,27 @@ header {
 
 .addHorarioCard h1 {
     color: #004768;
+
+    min-height: 40px;
 }
 
 .addHorarioDados {
     width: 95%;
+    height: 85%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.addHorarioDados strong, h2 {
+    width: 100%;
+}
+
+.addHorarioDados input[type="datetime-local"] {
+    width: 100%;
+    border: 1px solid #cccccc;
+    padding: 5px;
 }
 
 .addHorarioDados strong {
@@ -264,20 +293,56 @@ header {
 
 .configHorarioCard {
     width: 40%;
+    height: max-content;
 
     background-color: #ffffff;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 .configHorarioCard h1 {
     color: #004768;
+
+    min-height: 40px;
 }
 
 .listaHorariosCard {
     width: 95%;
+    height: 85%
+}
+
+.listaHorarioContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listaHorarioContainerInfo {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 5px;
+}
+
+.horario span {
+    color: #004768;
+}
+
+.removerHorario a {
+    color: #df555c;
+    transition: .2s ease-out;
+
+}
+
+.removerHorario a:hover {
+    color: #c00417;
+    transition: .2s ease-in;
 }
 
 /* Snackbar (aviso de erro) */
