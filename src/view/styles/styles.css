@@ -1,50 +1,50 @@
 /* Estilo geral */
 body {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    background-color: #cccccc;
-    font-family: 'Signika', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: #cccccc;
+  font-family: 'Signika', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 header {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 50px;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 50px;
 
-    background-color: #0094CF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #0094cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerContainer {
-    width: 60%;
-    height: 100%;
+  width: 60%;
+  height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .botaoCadastro {
-    background-color: #ffffff;
-    color: #0094CF;
+  background-color: #ffffff;
+  color: #0094cf;
 
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    
-    cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 
-    padding: 12px;
+  cursor: pointer;
+
+  padding: 12px;
 }
 
 /* ----------------------------------------------- */
@@ -52,82 +52,82 @@ header {
 /* Index/Listagem */
 
 .listCard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    border-radius: 2px;
+  border-radius: 2px;
 
-    width: 60%;
-    padding: 5px;
+  width: 60%;
+  padding: 5px;
 }
 
 .medicoCard {
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    width: 100%;
-    margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 30px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .opcoesCard {
-    width: 95%;
+  width: 95%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .opcoesCard h1 {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
 
-    color: #004768;
+  color: #004768;
 }
 
 .horarioCard {
-    width: 95%;
+  width: 95%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .horarioCard span {
-    padding: 2px 15px;
-    color: #ffffff;
-    background-color: #0094CF;
-    border-radius: 3px;
-    font-weight: bold;
-    margin-top: 10px;
+  padding: 2px 15px;
+  color: #ffffff;
+  background-color: #0094cf;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .controleCard {
-    width: 50%;
+  width: 50%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .controleCard a {
-    margin-left: 10px;
-    padding: 2px 6px;
+  margin-left: 10px;
+  padding: 2px 6px;
 
-    text-decoration: none;
-    border: 1px #0094CF solid;
-    border-radius: 3px;
+  text-decoration: none;
+  border: 1px #0094cf solid;
+  border-radius: 3px;
 
-    font-size: 12px;
-    color: #0094CF;
+  font-size: 12px;
+  color: #0094cf;
 }
 
 /* ---------------------------------------- */
@@ -135,93 +135,91 @@ header {
 /* Cadastro/Alteração de Médico */
 
 .cadastroCard {
-    width: 45%;
+  width: 45%;
 
-    background-color: #ffffff;
-    border-radius: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
 
-    padding: 5px;
+  padding: 5px;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .cadastroCard form {
-    width: 95%;
+  width: 95%;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cadastroCard h1 {
-    color: #004768;
+  color: #004768;
 }
 
 .formLabel {
-    color: #004768;
+  color: #004768;
 }
 
 .labelForm {
-    width: 100%;
+  width: 100%;
 
-    margin-top: 20px;
-    display: flex;
+  margin-top: 20px;
+  display: flex;
 }
 
 .inputForm {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .inputForm input {
-    width: 100%;
-    height: 30px;
+  width: 100%;
+  height: 30px;
 
-    padding: 1px 5px;
+  padding: 1px 5px;
 
-    font-family: 'Signika', sans-serif;
+  font-family: 'Signika', sans-serif;
 
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
 }
 
 .buttonsForm {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .botaoContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .botaoContainer button {
-    background-color: #0094CF;
-    color: #ffffff;
-    font-family: 'Signika', sans-serif;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  background-color: #0094cf;
+  color: #ffffff;
+  font-family: 'Signika', sans-serif;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 
-    padding: 10px 18px;
-
-    
+  padding: 10px 18px;
 }
 
 .voltarContainer {
-    padding: 20px 0;
+  padding: 20px 0;
 
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .voltarContainer a {
-    color: #0094CF;
-    text-align: center;
+  color: #0094cf;
+  text-align: center;
 }
 
 /* ------------------------------------------ */
@@ -229,150 +227,149 @@ header {
 /* Configurar horário */
 
 .configContainer {
-    width: 80%;
+  width: 80%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .addHorarioCard {
-    width: 40%;
-    height: max-content; 
+  width: 40%;
+  height: max-content;
 
-    background-color: #ffffff;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 2px;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 2px;
 }
 
 #form-horario {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .addHorarioCard h1 {
-    color: #004768;
+  color: #004768;
 
-    min-height: 40px;
+  min-height: 40px;
 }
 
 .addHorarioDados {
-    width: 95%;
-    height: 85%;
+  width: 95%;
+  height: 85%;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.addHorarioDados strong, h2 {
-    width: 100%;
+.addHorarioDados strong,
+h2 {
+  width: 100%;
 }
 
-.addHorarioDados input[type="datetime-local"] {
-    width: 100%;
-    border: 1px solid #cccccc;
-    padding: 5px;
+.addHorarioDados input[type='datetime-local'] {
+  width: 100%;
+  border: 1px solid #cccccc;
+  padding: 5px;
 }
 
 .addHorarioDados strong {
-    color: #004768;
+  color: #004768;
 }
 
 .addHorarioDados h2 {
-    color: #004768;
+  color: #004768;
 }
 
 .configHorarioCard {
-    width: 40%;
-    height: max-content;
+  width: 40%;
+  height: max-content;
 
-    background-color: #ffffff;
+  background-color: #ffffff;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 2px;
 }
 
 .configHorarioCard h1 {
-    color: #004768;
+  color: #004768;
 
-    min-height: 40px;
+  min-height: 40px;
 }
 
 .listaHorariosCard {
-    width: 95%;
-    height: 85%
+  width: 95%;
+  height: 85%;
 }
 
 .listaHorarioContainer {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .listaHorarioContainerInfo {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    border-bottom: 1px solid #cccccc;
-    margin-bottom: 5px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 5px;
 }
 
 .horario span {
-    color: #004768;
+  color: #004768;
 }
 
 .removerHorario a {
-    color: #df555c;
-    transition: .2s ease-out;
-
+  color: #df555c;
+  transition: 0.2s ease-out;
 }
 
 .removerHorario a:hover {
-    color: #c00417;
-    transition: .2s ease-in;
+  color: #c00417;
+  transition: 0.2s ease-in;
 }
 
 /* Snackbar (aviso de erro) */
 
 .snackbar {
-    position: absolute;
-    top: 90px;
-    padding: 5px 10px;
+  position: absolute;
+  top: 90px;
+  padding: 5px 10px;
 
-    border-radius: 5px;
-    border: 1px solid;
+  border-radius: 5px;
+  border: 1px solid;
 
-    min-width: 250px;
-    width: fit-content;
+  min-width: 250px;
+  width: fit-content;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .snackbar.erro {
-    border-color: #f79fa8;
-    background-color: #f8d7da;
-    color: #721c24;
+  border-color: #f79fa8;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 .snackbar.sucesso {
-    border-color: #a4faa7;
-    background-color: #E1F8D7;
-    color: #33721C;
+  border-color: #a4faa7;
+  background-color: #e1f8d7;
+  color: #33721c;
 }
 
 /* ------------------------------------- */
@@ -380,74 +377,74 @@ header {
 /* Breakpoints */
 
 @media only screen and (max-width: 600px) {
-    .headerContainer {
-        width: 90%;
-    }
+  .headerContainer {
+    width: 90%;
+  }
 
-    .listCard {
-        width: 100%;
-        justify-content: center;
-    }
+  .listCard {
+    width: 100%;
+    justify-content: center;
+  }
 
-    .controleCard {
-        width: 100%;
-        justify-content: flex-start;
-    }
+  .controleCard {
+    width: 100%;
+    justify-content: flex-start;
+  }
 
-    .controleCard a {
-        margin: 0 10px 0 0;
-    }
+  .controleCard a {
+    margin: 0 10px 0 0;
+  }
 
-    .horarioCard span {
-        padding: 2px 12px;
-        margin-top: 20px;
-    }
+  .horarioCard span {
+    padding: 2px 12px;
+    margin-top: 20px;
+  }
 
-    .opcoesCard h1 {
-        width: 100%;
-        align-items: center;
-    }
+  .opcoesCard h1 {
+    width: 100%;
+    align-items: center;
+  }
 
-    .medicoCard {
-        width: 90%;
-    }
+  .medicoCard {
+    width: 90%;
+  }
 
-    .cadastroCard {
-        width: 90%;
-    }
+  .cadastroCard {
+    width: 90%;
+  }
 
-    .addHorarioCard {
-        width: 100%;
-    }
+  .addHorarioCard {
+    width: 100%;
+  }
 
-    .configHorarioCard {
-        width: 100%;
-        margin-top: 20px;
-    }
+  .configHorarioCard {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-    .horarioCard {
-        justify-content: center;
-    }
+  .horarioCard {
+    justify-content: center;
+  }
 
-    .opcoesCard h1 {
-        width: 100%;
-        justify-content:  center;
-        text-align: center;
-    }
+  .opcoesCard h1 {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 
-    .controleCard {
-        justify-content: center;
-    }
+  .controleCard {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .controleCard {
-        flex-wrap: nowrap;
-    }
-    
-    .controleCard a {
-        margin-left: 5px;
-    }
+  .controleCard {
+    flex-wrap: nowrap;
+  }
+
+  .controleCard a {
+    margin-left: 5px;
+  }
 }
