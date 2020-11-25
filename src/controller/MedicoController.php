@@ -19,12 +19,12 @@ class MedicoController {
         $senha_encript = password_hash($senha, PASSWORD_DEFAULT);
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $_SESSION["erro"] = "E-mail inválido!";
+            setcookie("erro","E-mail inválido!");
             return false;
         }
 
         if(strlen($nome) < 6 || strlen($senha) < 6) {
-            $_SESSION["erro"] = "Nome ou senha com poucos caracteres!";
+            setcookie("erro","Nome ou senha com poucos caracteres!");
             return false;
         }
 
@@ -37,12 +37,14 @@ class MedicoController {
         $senha_antiga = $medico->PegarSenha($id);
 
         if(!password_verify($senha, $senha_antiga)) {
+            setcookie("erro","Senha inválida");
             return false;
         }
 
         $senha_encript = password_hash($senha_nova, PASSWORD_DEFAULT);
 
         if(strlen($nome) < 6 || strlen($senha_nova) < 6) {
+            setcookie("erro","Nome ou senha com poucos caracteres!");
             return false;
         }
 

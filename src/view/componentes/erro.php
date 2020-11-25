@@ -1,6 +1,8 @@
 <?php 
-if($_SESSION["erro"]) {
-    echo $_SESSION["erro"];
-    $_SESSION["erro"] = false;
+
+if($_COOKIE["erro"]) {
+    echo $_COOKIE["erro"];
+    setcookie("erro", false, 0);
 }
+
 ?>    
