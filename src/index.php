@@ -21,7 +21,9 @@ $medicos = MedicoController::Listagem();
             </div>
             <div class="horarioCard">
                 <?php forEach($medico["horarios"] as $horario) {?>
-                    <span><?=date("d/m/Y \à\s\ H:i",strtotime($horario["data_horario"]))?></span>
+                    <a title="Agendar horário" href="agendar_horario.php?id=<?=$horario["id"]?>">
+                        <?=date("d/m/Y \à\s\ H:i",strtotime($horario["data_horario"]))?>
+                    </a>
                 <?php } ?>
             </div>
         </div>

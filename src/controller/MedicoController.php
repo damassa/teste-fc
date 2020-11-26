@@ -7,7 +7,7 @@ class MedicoController {
         $medicos = $medico->PegarTodos();
 
         foreach ($medicos as $id => $valor) {
-            $medicos[$id]["horarios"] = $medico->PegarHorariosMedico($valor["id"]);
+            $medicos[$id]["horarios"] = HorarioModel::PegarHorariosMedico($valor["id"]);
         }
 
         return $medicos;

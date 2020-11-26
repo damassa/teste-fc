@@ -1,6 +1,7 @@
 <?php 
 require "../componentes/header.php";
-$medico = MedicoController::BuscarUmMedico($_GET["id"]);
+$medico = MedicoController::BuscarUmMedico($_GET["medico"]);
+$horarios = HorarioController::PegarHorarios($_GET["medico"]);
 
 ?>
 
@@ -11,8 +12,9 @@ $medico = MedicoController::BuscarUmMedico($_GET["id"]);
             <strong>Nome: </strong>
             <h2><?=$medico["nome"]?></h2>
             <strong>Data e hora</strong>
-            <form action="add_horario.php" method="post" id="form-horario">
-                <input type="datetime-local" />
+            <form action="salvar_horario.php" method="post" id="form-horario">
+                <input type="hidden" name="id_medico" value=<?=$medico["id"]?> />
+                <input type="datetime-local" name="data_horario" />
                 <div class="buttonsForm">
                     <div class="botaoContainer">
                         <button type="submit">Adicionar horário</button>
@@ -28,22 +30,24 @@ $medico = MedicoController::BuscarUmMedico($_GET["id"]);
         <h1>Horários configurados</h1>
         <div class="listaHorariosCard">
             <div class="listaHorarioContainer">
-                <div class="listaHorarioContainerInfo">
-                    <div class="horario">
-                        <span>26/11/2020 07:00</span>
+                <?php foreach($horarios as $horario) {?>
+                    <div class="listaHorarioContainerInfo">
+                        <div class="horario">
+                            <span>
+                                <?=date("d/m/Y H:i", strtotime($horario["data_horario"]))?>
+                            </span>
+                        </div>
+                        <?php if ($horario["horario_agendado"] == 0) {?>
+                            <div class="removerHorario">
+                                <a href="remover_horario.php?id=<?=$horario["id"]?>">
+                                    Remover
+                                </a>
+                            </div>
+                        <?php } ?>
                     </div>
-                    <div class="removerHorario">
-                        <a href="">Remover</a>
-                    </div>
-                </div>
+                <?php } ?>    
             </div>
         </div>
     </div>
 </div>
-<script>
-    $("#form-horario").submit(function(event){
-        event.preventDefault();
-        console.log("Foi");
-    })
-</script>
 <?php require "../componentes/rodape.php" ?>

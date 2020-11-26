@@ -100,13 +100,20 @@ header {
   padding-bottom: 30px;
 }
 
-.horarioCard span {
+.horarioCard a {
   padding: 2px 15px;
   color: #ffffff;
   background-color: #0094cf;
   border-radius: 3px;
   font-weight: bold;
   margin-top: 10px;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+.horarioCard a:hover {
+  background-color: #014d6b;
+  transition: 0.2s ease-in;
 }
 
 .controleCard {

@@ -3,7 +3,10 @@
 class MedicoModel {
     public function PegarTodos() {
         global $conn;
-        $sql = "SELECT * FROM medicos";
+        $sql = "SELECT medicos.`id`, nome FROM medicos LEFT JOIN horarios ON medicos.`id` = horarios.`id_medico` WHERE data_horario = (
+            SELECT min(data_horario) FROM horarios AS h WHERE h.`id_medico` = medicos.`id`
+        )
+        ORDER BY horarios.`data_horario` ASC";
         $select = $conn-> prepare($sql);
         $select-> execute();
         $result = $select->fetchAll();
@@ -28,16 +31,6 @@ class MedicoModel {
         $select-> execute();
         $result = $select->fetch();
         return $result["senha"];
-    }
-
-    public function PegarHorariosMedico($id_medico) {
-        global $conn;
-        $sql = "SELECT * FROM horarios WHERE id_medico = :id_medico";
-        $select = $conn-> prepare($sql);
-        $select-> bindParam(":id_medico", $id_medico, PDO::PARAM_INT);
-        $select-> execute();
-        $result = $select->fetchAll();
-        return $result;
     }
 
     public function CadastrarMedico($email, $nome, $senha) {
