@@ -4,7 +4,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/teste-fc/src/model/HorarioModel.php";
 class HorarioController {
   public function PegarHorarios($medico) {
     $horario = new HorarioModel();
-    return $horario->PegarHorariosMedico($medico);
+    return $horario->PegarTodosHorariosMedico($medico);
   }
 
   public function RemoverHorario($id) {
@@ -39,6 +39,18 @@ class HorarioController {
       return true;
     } else {
       CriaAlerta("erro", "Erro ao atribuir horário!");
+      return false;
+    }
+  }
+
+  public function AgendarHorario($id) {
+    $horario = new HorarioModel();
+
+    if ($horario->TrocarHorarioAgendado($id, 1)) {
+      CriaAlerta("sucesso", "Horário agendado!");
+      return true;
+    } else {
+      CriaAlerta("erro", "Erro! Horário já agendado!");
       return false;
     }
   }

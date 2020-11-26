@@ -95,7 +95,7 @@ header {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   padding-bottom: 30px;
 }
@@ -107,6 +107,7 @@ header {
   border-radius: 3px;
   font-weight: bold;
   margin-top: 10px;
+  margin-right: 10px;
   text-decoration: none;
   transition: 0.2s ease-out;
 }
@@ -286,6 +287,8 @@ h2 {
   width: 100%;
   border: 1px solid #cccccc;
   padding: 5px;
+  font-family: 'Signika', sans-serif;
+  color: #737373;
 }
 
 .addHorarioDados strong {
@@ -383,7 +386,7 @@ h2 {
 
 /* Breakpoints */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .headerContainer {
     width: 90%;
   }
@@ -420,6 +423,11 @@ h2 {
     width: 90%;
   }
 
+  .horarioCard {
+    justify-content: center;
+    margin-right: -10px;
+  }
+
   .addHorarioCard {
     width: 100%;
   }
@@ -430,9 +438,10 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .horarioCard {
     justify-content: center;
+    margin-right: -10px;
   }
 
   .opcoesCard h1 {
