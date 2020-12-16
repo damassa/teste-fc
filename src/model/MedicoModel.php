@@ -3,9 +3,12 @@
 class MedicoModel {
     public function PegarTodos() {
         global $conn;
-        $sql = "SELECT medicos.`id`, nome FROM medicos LEFT JOIN horarios ON medicos.`id` = horarios.`id_medico` WHERE data_horario = (
-            SELECT min(data_horario) FROM horarios AS h WHERE h.`id_medico` = medicos.`id` AND h.`data_horario` >= NOW()
+        $sql = "SELECT medicos.`id`, nome
+        FROM medicos 
+        LEFT JOIN horarios ON medicos.`id` = horarios.`id_medico` AND horarios.`data_horario` = (
+            SELECT min(data_horario) FROM horarios AS h WHERE h.`id_medico` = medicos.`id` AND h.`horario_agendado` = 0 AND h.`data_horario` >= NOW()
         )
+        WHERE data_horario IS NOT NULL
         ORDER BY horarios.`data_horario` ASC";
         $select = $conn-> prepare($sql);
         $select-> execute();
