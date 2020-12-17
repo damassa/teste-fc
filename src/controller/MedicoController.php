@@ -41,12 +41,8 @@ class MedicoController {
         
         $senha_antiga = $medico->PegarSenha($id);
 
-        if($senha_antiga === $senha_nova) {
-            CriaAlerta("erro", "Senhas iguais! Por favor, troque a senha");
-        }
-
         if(!password_verify($senha, $senha_antiga)) {
-            CriaAlerta("erro","Senha inválida");
+            CriaAlerta("erro","Senha inválida ou senhas iguais");
             return false;
         }
 
